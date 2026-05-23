@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>VIZELEC | Ingeniería Eléctrica, SCADA y Automatización Industrial</title>
+  <meta name="description" content="VIZELEC es una consultora y empresa de ingeniería líder en proyectos eléctricos, automatización de procesos, sistemas SCADA, telemedición, energías renovables y eficiencia para industrias y cooperativas.">
+  <meta name="keywords" content="vizelec, ingenieria electrica, automatizacion industrial, scada, telemedicion, energia solar, dnp3, modbus, plc, cooperativas electricas, eficiencia energetica, mantenimiento industrial">
+  <meta name="author" content="VIZELEC">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.vizelec.com/">
+  <meta property="og:title" content="VIZELEC | Ingeniería Eléctrica e Innovación Tecnológica">
+  <meta property="og:description" content="Soluciones avanzadas en automatización, SCADA y sistemas eléctricos de potencia para industrias y cooperativas.">
+  <meta property="og:image" content="public/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="VIZELEC | Ingeniería Eléctrica e Innovación Tecnológica">
+  <meta property="twitter:description" content="Soluciones avanzadas en automatización, SCADA y sistemas eléctricos de potencia para industrias y cooperativas.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2300d2ff' d='M13 2v9h7L11 22v-9H4L13 2z'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts (Outfit & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. HEADER / NAVBAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Logo de VIZELEC -->
+      <a href="#hero" class="logo" id="header-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.5 2L4 13.5H11.5L10.5 22L20 10.5H12.5L13.5 2Z" fill="url(#logo-grad)" stroke="var(--accent-blue)" stroke-width="1.5" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stop-color="var(--accent-blue)"/>
+              <stop offset="1" stop-color="var(--accent-green)"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>VIZELEC</span>
+      </a>
+
+      <!-- Menú de Navegación -->
+      <nav class="nav-menu" id="navigation-menu" aria-label="Navegación principal">
+        <a href="#hero" class="nav-link active">Inicio</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#proyectos" class="nav-link">Proyectos</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+        <!-- Botón destacado de WhatsApp -->
+        <a href="#" class="btn btn-whatsapp" data-action="whatsapp-contact" id="nav-whatsapp-btn">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.907h.003c4.37 0 7.927-3.552 7.931-7.928a7.86 7.86 0 0 0-2.327-5.594ZM7.995 14.52a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592Zm3.69-4.82c-.202-.101-1.202-.594-1.392-.66-.19-.066-.33-.1-.47.101-.14.202-.54.66-.662.802-.12.14-.24.156-.442.054-.202-.101-.853-.314-1.624-1.002-.6-.535-1.005-1.197-1.123-1.4-.118-.202-.013-.311.088-.41.09-.09.202-.236.3-.354.1-.118.133-.2.2-.334.066-.134.034-.251-.017-.352-.05-.101-.47-1.136-.643-1.556-.17-.41-.35-.353-.47-.36-.12-.007-.258-.007-.396-.007a.781.781 0 0 0-.568.264c-.19.203-.733.717-.733 1.748 0 1.03.75 2.023.853 2.165.103.143 1.477 2.257 3.578 3.16.5.216.89.345 1.197.443.502.16.96.137 1.32.084.404-.06 1.202-.49 1.372-.964.17-.474.17-.88.12-.964-.05-.084-.19-.134-.39-.234Z"/>
+          </svg>
+          Consultar
+        </a>
+      </nav>
+
+      <!-- Botón menú hamburguesa -->
+      <button class="mobile-toggle" aria-label="Abrir menú de navegación" aria-controls="navigation-menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <!-- Contenido textual del Hero -->
+        <div class="hero-content reveal">
+          <div class="hero-tag">
+            <span class="dot"></span>
+            Ingeniería de Vanguardia
+          </div>
+          <h1><span class="text-gradient-blue">Ingeniería Eléctrica</span></h1>
+          <p>
+            Diseñamos, optimizamos e integramos proyectos eléctricos de potencia, como Estaciones Transformadoras y Lineas Electricas, sistemas SCADA avanzados y energías renovables con los más altos estándares de precisión e innovación técnica.
+          </p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary">Solicitar Presupuesto</a>
+            <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
+          </div>
+        </div>
+
+        <!-- Ilustración / Gráfico vectorial tecnológico e interactivo -->
+        <div class="hero-visual reveal-scale">
+          <div class="hero-svg-container">
+            <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
+              <!-- Círculos de datos e interfaz circular de SCADA -->
+              <circle cx="250" cy="250" r="190" stroke="rgba(0, 210, 255, 0.15)" stroke-width="2" stroke-dasharray="10 15" style="transform-origin: center; animation: spin-clockwise 40s linear infinite;"/>
+              <circle cx="250" cy="250" r="150" stroke="rgba(0, 230, 118, 0.12)" stroke-width="1.5" stroke-dasharray="20 10" style="transform-origin: center; animation: spin-counter-clockwise 30s linear infinite;"/>
+              <circle cx="250" cy="250" r="220" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+              
+              <!-- Red de distribución inteligente (Circuit paths) -->
+              <path d="M70 250 H430" stroke="rgba(255, 255, 255, 0.05)" stroke-width="2"/>
+              <path d="M250 70 V430" stroke="rgba(255, 255, 255, 0.05)" stroke-width="2"/>
+              
+              <!-- Líneas que simulan flujo de energía -->
+              <path d="M120 120 L250 250 L380 380" stroke="url(#energy-path-1)" stroke-width="2" stroke-linecap="round" stroke-dasharray="40 180" style="animation: energy-flow 6s linear infinite;"/>
+              <path d="M380 120 L250 250 L120 380" stroke="url(#energy-path-2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="50 150" style="animation: energy-flow 8s linear reverse infinite;"/>
+              
+              <!-- Nodos de Red Eléctrica -->
+              <g style="animation: bounce-slow 4s ease-in-out infinite;">
+                <!-- Panel Central: SCADA & PLC Monitor -->
+                <rect x="180" y="190" width="140" height="120" rx="12" fill="var(--bg-secondary)" stroke="var(--accent-blue)" stroke-width="1.5" style="filter: drop-shadow(0 4px 20px rgba(0,210,255,0.2));"/>
+                <!-- Pantalla del Monitor -->
+                <rect x="190" y="200" width="120" height="85" rx="6" fill="var(--bg-primary)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+                
+                <!-- Ondas sinusoidales (Calidad de energía / Osciloscopio en SCADA) -->
+                <path d="M195 240 Q210 215 225 240 T255 240 T285 240 T305 240" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" fill="none" style="stroke-dasharray: 400; stroke-dashoffset: 0; animation: sine-move 4s linear infinite;"/>
+                <path d="M195 245 Q210 230 225 245 T255 245 T285 245 T305 245" stroke="var(--accent-blue)" stroke-width="1.5" opacity="0.6" stroke-linecap="round" fill="none" style="stroke-dasharray: 400; stroke-dashoffset: 0; animation: sine-move 5s linear infinite;"/>
+                
+                <!-- Interfaz gráfica luces LED de estado -->
+                <circle cx="205" cy="210" r="3" fill="var(--accent-green)"/>
+                <circle cx="215" cy="210" r="3" fill="var(--accent-blue)" style="animation: pulse-glow 1.5s infinite; transform-origin: 215px 210px;"/>
+                <circle cx="225" cy="210" r="3" fill="rgba(255, 255, 255, 0.3)"/>
+                <rect x="280" y="206" width="22" height="8" rx="4" fill="rgba(0, 210, 255, 0.15)" stroke="rgba(0, 210, 255, 0.4)" stroke-width="0.5"/>
+              </g>
+
+              <!-- Generador Solar y de Turbina (Esquina Superior Izquierda) -->
+              <g transform="translate(80, 80)" style="animation: float-widget 5s ease-in-out infinite;">
+                <circle cx="20" cy="20" r="35" fill="var(--bg-secondary)" stroke="var(--border-color)" stroke-width="1"/>
+                <!-- Icono Solar -->
+                <path d="M20 8 V14 M20 26 V32 M8 20 H14 M26 20 H32 M11.5 11.5 L15.7 15.7 M24.3 24.3 L28.5 28.5 M11.5 28.5 L15.7 24.3 M24.3 11.5 L28.5 15.7" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="20" cy="20" r="6" fill="var(--accent-green)" style="box-shadow: var(--shadow-glow-green);"/>
+              </g>
+
+              <!-- Nodo Torre de Alta Tensión / Subestación (Esquina Superior Derecha) -->
+              <g transform="translate(350, 70)" style="animation: float-widget-delayed 6s ease-in-out infinite;">
+                <circle cx="30" cy="30" r="35" fill="var(--bg-secondary)" stroke="var(--border-color)" stroke-width="1"/>
+                <!-- Icono de Red de Distribución / Torre Eléctrica -->
+                <path d="M30 12 L18 42 H42 L30 12 Z M18 42 L42 42 M22 30 H38 M25 22 H35 M30 12 V42" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linejoin="round"/>
+              </g>
+
+              <!-- Nodo Turbina / Automatización Rústica (Esquina Inferior Derecha) -->
+              <g transform="translate(360, 340)" style="animation: float-widget 6.5s ease-in-out infinite;">
+                <circle cx="25" cy="25" r="35" fill="var(--bg-secondary)" stroke="var(--border-color)" stroke-width="1"/>
+                <!-- Icono Engranaje / PLC -->
+                <path d="M25 15 A10 10 0 1 0 25 35 A10 10 0 1 0 25 15" stroke="var(--text-secondary)" stroke-width="1.5"/>
+                <!-- Aspas del motor / Engranajes en animación -->
+                <g style="transform-origin: 25px 25px; animation: spin-clockwise 10s linear infinite;">
+                  <rect x="23" y="10" width="4" height="6" rx="1" fill="var(--accent-blue)"/>
+                  <rect x="23" y="34" width="4" height="6" rx="1" fill="var(--accent-blue)"/>
+                  <rect x="10" y="23" width="6" height="4" rx="1" fill="var(--accent-blue)"/>
+                  <rect x="34" y="23" width="6" height="4" rx="1" fill="var(--accent-blue)"/>
+                </g>
+              </g>
+
+              <!-- Nodo de Fibra Óptica / Telecomunicaciones (Esquina Inferior Izquierda) -->
+              <g transform="translate(60, 330)" style="animation: float-widget-delayed 5.5s ease-in-out infinite;">
+                <circle cx="25" cy="25" r="35" fill="var(--bg-secondary)" stroke="var(--border-color)" stroke-width="1"/>
+                <!-- Icono Red Nodal -->
+                <circle cx="25" cy="18" r="4" fill="var(--accent-green)"/>
+                <circle cx="15" cy="30" r="4" fill="var(--text-secondary)"/>
+                <circle cx="35" cy="30" r="4" fill="var(--text-secondary)"/>
+                <line x1="23" y1="21" x2="17" y2="27" stroke="var(--border-color)" stroke-width="1.5"/>
+                <line x1="27" y1="21" x2="33" y2="27" stroke="var(--border-color)" stroke-width="1.5"/>
+                <line x1="19" y1="30" x2="31" y2="30" stroke="var(--border-color)" stroke-width="1.5"/>
+              </g>
+
+              <!-- Estilos del Gráfico SVG -->
+              <style>
+                @keyframes spin-clockwise {
+                  from { transform: rotate(0deg); }
+                  to { transform: rotate(360deg); }
+                }
+                @keyframes spin-counter-clockwise {
+                  from { transform: rotate(360deg); }
+                  to { transform: rotate(0deg); }
+                }
+                @keyframes energy-flow {
+                  0% { stroke-dashoffset: 220; }
+                  100% { stroke-dashoffset: 0; }
+                }
+                @keyframes sine-move {
+                  0% { stroke-dashoffset: 0; }
+                  100% { stroke-dashoffset: -80; }
+                }
+                @keyframes bounce-slow {
+                  0%, 100% { transform: translateY(0); }
+                  50% { transform: translateY(-8px); }
+                }
+                @keyframes float-widget {
+                  0%, 100% { transform: translateY(0) scale(1); }
+                  50% { transform: translateY(-6px) scale(1.02); filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3)); }
+                }
+                @keyframes float-widget-delayed {
+                  0%, 100% { transform: translateY(0) scale(1); }
+                  50% { transform: translateY(6px) scale(0.98); }
+                }
+              </style>
+
+              <!-- Definiciones de Degradados de Energía -->
+              <defs>
+                <linearGradient id="energy-path-1" x1="120" y1="120" x2="380" y2="380" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="var(--accent-blue)"/>
+                  <stop offset="0.5" stop-color="var(--accent-green)"/>
+                  <stop offset="1" stop-color="var(--accent-blue)"/>
+                </linearGradient>
+                <linearGradient id="energy-path-2" x1="380" y1="120" x2="120" y2="380" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="var(--accent-green)"/>
+                  <stop offset="0.5" stop-color="var(--accent-blue)"/>
+                  <stop offset="1" stop-color="var(--accent-green)"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. SECCIÓN SERVICIOS
+         ========================================================================== -->
+    <section id="servicios" class="section-padding">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tag">Qué hacemos</span>
+          <h2>Servicios Especializados en Ingeniería</h2>
+          <p>Ofrecemos soluciones técnicas robustas y adaptadas a las necesidades específicas de la industria y la distribución de energía.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1: Estaciones Transformadores -->
+          <article class="service-card glass-card reveal">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Estaciones Transformadores</h3>
+            <p>Ingeniería de detalle, especificaciones y cálculo técnico para el diseño de subestaciones y estaciones transformadoras (ET) de media y alta tensión.</p>
+          </article>
+
+          <!-- Card 2: Lineas Eléctricas -->
+          <article class="service-card glass-card reveal reveal-delay-1">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 3v18M19 3v18M5 12h14M5 7h14M5 17h14"/>
+              </svg>
+            </div>
+            <h3>Lineas Eléctricas</h3>
+            <p>Diseño y cálculo de estructuras mecánicas, tendido aéreo y subterráneo de redes de distribución y líneas de media tensión con altos estándares de seguridad.</p>
+          </article>
+
+          <!-- Card 3: Industrias -->
+          <article class="service-card glass-card reveal reveal-delay-2">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 21H2V3l7 4 5-4 8 4v18z M10 13H6M10 17H6"/>
+              </svg>
+            </div>
+            <h3>Industrias</h3>
+            <p>Proyectos de adecuación de tableros de potencia, corrección del factor de potencia, mitigación de perturbaciones y automatización de procesos industriales complejos.</p>
+          </article>
+
+          <!-- Card 4: Centrales de generación -->
+          <article class="service-card glass-card reveal">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/>
+              </svg>
+            </div>
+            <h3>Centrales de generación</h3>
+            <p>Ingeniería conceptual y básica para centrales térmicas, hidroeléctricas y de cogeneración.</p>
+          </article>
+
+          <!-- Card 5: Energias Renobables -->
+          <article class="service-card glass-card reveal reveal-delay-1">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/>
+              </svg>
+            </div>
+            <h3>Energias Renobables</h3>
+            <p>Dimensionamiento e instalación llave en mano de sistemas de generación limpia y autoconsumo industrial basados en energía solar fotovoltaica.</p>
+          </article>
+
+          <!-- Card 6: Habilitaciones comerciales por profesional matriculado -->
+          <article class="service-card glass-card reveal reveal-delay-2">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <h3>Habilitaciones comerciales por profesional matriculado</h3>
+            <p>Mediciones de puesta a tierra certificadas, firmas de planos oficiales, protocolos SRT900 e informes técnicos válidos ante entes reguladores.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. SECCIÓN PROYECTOS / CASOS REALES
+         ========================================================================== -->
+    <section id="proyectos" class="section-padding" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tag">Casos de Éxito</span>
+          <h2>Proyectos y Soluciones Reales</h2>
+          <p>Nuestra experiencia técnica plasmada en implementaciones con alto impacto operacional y económico para nuestros clientes.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Proyecto 1 -->
+          <article class="project-card glass-card reveal">
+            <div class="project-image project-slider">
+              <span class="project-badge badge-blue">Subestación</span>
+              
+              <!-- Contenedor del Slider -->
+              <div class="slider-wrapper">
+                <!-- Foto 3: Subestación (Es la vista general, ideal para iniciar) -->
+                <div class="slide active">
+                  <img src="public/images/tres_lomas_3.jpg" alt="ET Tres Lomas - Estación Transformadora e Infraestructura" loading="lazy">
+                </div>
+                <!-- Foto 1: Tablero de control -->
+                <div class="slide">
+                  <img src="public/images/tres_lomas_1.jpg" alt="ET Tres Lomas - Tablero de Control y Mímica Eléctrica" loading="lazy">
+                </div>
+                <!-- Foto 2: Mediciones y reconectador -->
+                <div class="slide">
+                  <img src="public/images/tres_lomas_2.jpg" alt="ET Tres Lomas - Trabajo Técnico y Mediciones con Fluke" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Controles del Slider -->
+              <button class="slider-btn prev" aria-label="Foto anterior">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="slider-btn next" aria-label="Siguiente foto">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <!-- Indicadores visuales -->
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Ingenieria ET Tres Lomas 66 kV</h3>
+              <p>Diseño conceptual, básico y de detalle electromecánico para la ampliación de la Estación Transformadora Tres Lomas en 66 kV, elevando la fiabilidad del nodo.</p>
+              <div class="project-result">
+                <svg class="project-result-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="project-result-text">Optimización de la estabilidad en transmisión de la red regional.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card glass-card reveal reveal-delay-1">
+            <div class="project-image project-slider">
+              <span class="project-badge badge-blue">Subestación</span>
+              
+              <!-- Contenedor del Slider -->
+              <div class="slider-wrapper">
+                <!-- Foto 1: Vista de elevación/corte longitudinal -->
+                <div class="slide active">
+                  <img src="public/images/absa_1.png" alt="ET ABSA - Vista de Elevación Electromecánica de la Subestación" loading="lazy">
+                </div>
+                <!-- Foto 2: Vista de planta/disposición general -->
+                <div class="slide">
+                  <img src="public/images/absa_2.png" alt="ET ABSA - Plano de Distribución en Planta de la Subestación" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Controles del Slider -->
+              <button class="slider-btn prev" aria-label="Foto anterior">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="slider-btn next" aria-label="Siguiente foto">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <!-- Indicadores visuales -->
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Ingenieria ET ABSA 13,2 kV</h3>
+              <p>Desarrollo de planos electromecánicos de detalle, dimensionamiento de barras y obra civil para la nueva Estación Transformadora de 13.2 kV.</p>
+              <div class="project-result">
+                <svg class="project-result-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="project-result-text">Aseguramiento del suministro eléctrico continuo para planta potabilizadora.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card glass-card reveal reveal-delay-2">
+            <div class="project-image project-slider">
+              <span class="project-badge badge-blue">Subestación</span>
+              
+              <!-- Contenedor del Slider -->
+              <div class="slider-wrapper">
+                <!-- Foto 4: Vista general de pórticos (Ideal para iniciar) -->
+                <div class="slide active">
+                  <img src="public/images/san_manuel_4.jpg" alt="ET San Manuel - Estructura y Pórticos en 33 kV" loading="lazy">
+                </div>
+                <!-- Foto 3: Celdas de media tensión -->
+                <div class="slide">
+                  <img src="public/images/san_manuel_3.jpg" alt="ET San Manuel - Tableros y Celdas de Media Tensión" loading="lazy">
+                </div>
+                <!-- Foto 1: Obra civil y excavación de zanja -->
+                <div class="slide">
+                  <img src="public/images/san_manuel_1.jpg" alt="ET San Manuel - Canalización y Obra Civil de Puesta a Tierra" loading="lazy">
+                </div>
+                <!-- Foto 2: Cable de media tensión y terminales -->
+                <div class="slide">
+                  <img src="public/images/san_manuel_2.jpg" alt="ET San Manuel - Terminales de Cable Subterráneo de Potencia" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Controles del Slider -->
+              <button class="slider-btn prev" aria-label="Foto anterior">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="slider-btn next" aria-label="Siguiente foto">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <!-- Indicadores visuales -->
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Ingenieria ET San Manuel 33 kV</h3>
+              <p>Cálculo y diseño ejecutivo de pórticos, malla de puesta a tierra, apantallamiento y estudios de flujos de potencia para el nodo de 33 kV.</p>
+              <div class="project-result">
+                <svg class="project-result-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="project-result-text">Interconexión de media tensión segura bajo rigurosas normativas técnicas.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 5 -->
+          <article class="project-card glass-card reveal reveal-delay-1">
+            <div class="project-image project-slider">
+              <span class="project-badge badge-blue">Subestación</span>
+              
+              <!-- Contenedor del Slider -->
+              <div class="slider-wrapper">
+                <!-- Foto 1: Diagrama unifilar (Nueva salida) -->
+                <div class="slide active">
+                  <img src="public/images/miramar_1.png" alt="Ingenieria ET Miramar - Diagrama Unifilar de Nueva Salida" loading="lazy">
+                </div>
+                <!-- Foto 2: Esquema eléctrico de enclavamiento -->
+                <div class="slide">
+                  <img src="public/images/miramar_2.png" alt="Ingenieria ET Miramar - Plano Funcional de Enclavamiento" loading="lazy">
+                </div>
+                <!-- Foto 3: Vista de conjunto mecánico de seccionador -->
+                <div class="slide">
+                  <img src="public/images/miramar_3.png" alt="Ingenieria ET Miramar - Plano de Conjunto Mecánico de Seccionador" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Controles del Slider -->
+              <button class="slider-btn prev" aria-label="Foto anterior">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="slider-btn next" aria-label="Siguiente foto">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <!-- Indicadores visuales -->
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Ingenieria ET Miramar</h3>
+              <p>Desarrollo integral de planos de planta, corte electromecánico, lógica de interbloqueos y memorias de cálculo para la adecuación técnica de la estación.</p>
+              <div class="project-result">
+                <svg class="project-result-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="project-result-text">Consolidación de la confiabilidad de suministro de la red costera.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 6 -->
+          <article class="project-card glass-card reveal reveal-delay-2">
+            <div class="project-image project-slider">
+              <span class="project-badge badge-green">Supervisión en Obra</span>
+              
+              <!-- Contenedor del Slider -->
+              <div class="slider-wrapper">
+                <!-- Foto 1: Trabajo en tableros de control -->
+                <div class="slide active">
+                  <img src="public/images/barker_1.png" alt="Central Barker - Trabajo de Supervisión en Tableros de Control" loading="lazy">
+                </div>
+                <!-- Foto 2: Conexión de puesta a tierra -->
+                <div class="slide">
+                  <img src="public/images/barker_2.png" alt="Central Barker - Conexión Electromecánica de Puesta a Tierra" loading="lazy">
+                </div>
+                <!-- Foto 3: Elevación mecánica de chimenea con grúa -->
+                <div class="slide">
+                  <img src="public/images/barker_3.png" alt="Central Barker - Montaje Mecánico e Izaje de Chimenea" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Controles del Slider -->
+              <button class="slider-btn prev" aria-label="Foto anterior">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="slider-btn next" aria-label="Siguiente foto">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <!-- Indicadores visuales -->
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Central Ciclo combinado Barker</h3>
+              <p>Supervisión en campo y montaje eléctrico de sistemas auxiliares críticos de potencia, control y canalizaciones en obra, adquiriendo valiosa experiencia en ejecución directa.</p>
+              <div class="project-result">
+                <svg class="project-result-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="project-result-text">Valiosa experiencia práctica adquirida en la supervisión de grandes montajes eléctricos.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 7 -->
+          <article class="project-card glass-card reveal">
+            <div class="project-image project-slider">
+              <span class="project-badge badge-green">Línea Rural</span>
+              
+              <!-- Contenedor del Slider -->
+              <div class="slider-wrapper">
+                <!-- Foto 1: Croquis de la obra -->
+                <div class="slide active">
+                  <img src="public/images/rural_1.png" alt="Líneas Rurales 13,2 kV - Croquis de la Obra y Trazado Satelital" loading="lazy">
+                </div>
+                <!-- Foto 2: Resumen de Estructuras Calculadas -->
+                <div class="slide">
+                  <img src="public/images/rural_2.png" alt="Líneas Rurales 13,2 kV - Resumen de Estructuras Calculadas" loading="lazy">
+                </div>
+                <!-- Foto 3: Resultados ecuación de cambios de estados -->
+                <div class="slide">
+                  <img src="public/images/rural_3.png" alt="Líneas Rurales 13,2 kV - Resultados de Ecuación de Cambios de Estados" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Controles del Slider -->
+              <button class="slider-btn prev" aria-label="Foto anterior">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="slider-btn next" aria-label="Siguiente foto">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <!-- Indicadores visuales -->
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Ingenieria lineas rurales 13,2 kV</h3>
+              <p>Proyecto ejecutivo de tendidos eléctricos en media tensión aérea, cálculo mecánico de estructuras de hormigón y madera, y optimización de trazas.</p>
+              <div class="project-result">
+                <svg class="project-result-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="project-result-text">Aseguramiento de estabilidad operativa para cooperativas y el sector agrícola.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 8 -->
+          <article class="project-card glass-card reveal reveal-delay-1">
+            <div class="project-image project-slider">
+              <span class="project-badge badge-green">Línea de Transmisión</span>
+              
+              <!-- Contenedor del Slider -->
+              <div class="slider-wrapper">
+                <!-- Foto 1: Índice de planos del proyecto -->
+                <div class="slide active">
+                  <img src="public/images/suarez_1.png" alt="Línea 132 kV Suárez - Guaminí - Índice General del Proyecto y Pliegos" loading="lazy">
+                </div>
+                <!-- Foto 2: Mapa de la traza de la LAT 132 kV -->
+                <div class="slide">
+                  <img src="public/images/suarez_2.png" alt="Línea 132 kV Suárez - Guaminí - Mapa de la Traza Geográfica de la LAT" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Controles del Slider -->
+              <button class="slider-btn prev" aria-label="Foto anterior">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="slider-btn next" aria-label="Siguiente foto">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <!-- Indicadores visuales -->
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Pliego de bases y condiciones Linea 132 kV Suarez - Guamini</h3>
+              <p>Redacción exhaustiva de especificaciones electromecánicas de torres, conductores, aislación, cálculo de fundaciones y pliegos licitatorios.</p>
+              <div class="project-result">
+                <svg class="project-result-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="project-result-text">Bases sólidas y validadas técnicamente para licitación de alta tensión.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 9 -->
+          <article class="project-card glass-card reveal reveal-delay-2">
+            <div class="project-image project-slider">
+              <span class="project-badge badge-green">Supervisión en Obra</span>
+              
+              <!-- Contenedor del Slider -->
+              <div class="slider-wrapper">
+                <!-- Foto 1: Vista general de la central -->
+                <div class="slide active">
+                  <img src="public/images/cerro_dragon_1.jpg" alt="Central Cerro Dragón - Vista de Montaje y Obra Exterior" loading="lazy">
+                </div>
+                <!-- Foto 2: Cableado e instrumentación de tableros -->
+                <div class="slide">
+                  <img src="public/images/cerro_dragon_2.jpg" alt="Central Cerro Dragón - Peinado y Conexión de Tableros Eléctricos" loading="lazy">
+                </div>
+                <!-- Foto 3: Bandejas y tendido de cableado de potencia -->
+                <div class="slide">
+                  <img src="public/images/cerro_dragon_3.jpg" alt="Central Cerro Dragón - Canalización y Tendido Eléctrico" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Controles del Slider -->
+              <button class="slider-btn prev" aria-label="Foto anterior">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="slider-btn next" aria-label="Siguiente foto">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <!-- Indicadores visuales -->
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Central termoelectrica Cerro Dragon</h3>
+              <p>Desempeño técnico en obra como mano de obra de supervisión eléctrica para sistemas de alimentación ininterrumpida y celdas de media tensión en la central del yacimiento petrolero.</p>
+              <div class="project-result">
+                <svg class="project-result-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="project-result-text">Consolidación de experiencia práctica directa en campo bajo exigentes condiciones de seguridad.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 10 -->
+          <article class="project-card glass-card reveal">
+            <div class="project-image project-slider">
+              <span class="project-badge badge-blue">SCADA & Control</span>
+              
+              <!-- Contenedor del Slider -->
+              <div class="slider-wrapper">
+                <!-- Foto 1: Gráfico de variables -->
+                <div class="slide active">
+                  <img src="public/images/scada_1.png" alt="Sistema SCADA ET San Manuel - Gráfico de Variables y Telemedida" loading="lazy">
+                </div>
+                <!-- Foto 2: Configuración de fuentes de datos Modbus y DNP3 -->
+                <div class="slide">
+                  <img src="public/images/scada_2.png" alt="Sistema SCADA ET San Manuel - Configuración de Fuentes de Datos Modbus y DNP3" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Controles del Slider -->
+              <button class="slider-btn prev" aria-label="Foto anterior">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="slider-btn next" aria-label="Siguiente foto">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <!-- Indicadores visuales -->
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Sistema SCADA ET San Manuel 33 kV</h3>
+              <p>Configuración de base de datos, estructuración de pantallas de telecontrol en HMI, mapas de variables DNP3 e integración remota de telemedida.</p>
+              <div class="project-result">
+                <svg class="project-result-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="project-result-text">Telecontrol seguro y monitoreo centralizado en tiempo real desde despacho.</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- ==========================================================================
+         8. FORMULARIO DE CONTACTO
+         ========================================================================== -->
+    <section id="contacto" class="section-padding" style="background-color: var(--bg-secondary);">
+      <div class="container contact-grid">
+        <!-- Información de contacto directa -->
+        <div class="contact-info reveal">
+          <div>
+            <span class="tag">Contacto Directo</span>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Hablemos de su Próximo Proyecto</h2>
+            <p style="margin-bottom: 2.5rem;">
+              Envíenos un mensaje explicando sus necesidades técnicas o agende una consulta con un ingeniero especializado de inmediato a través de nuestros canales de comunicación rápida.
+            </p>
+          </div>
+
+          <div class="contact-details">
+            <!-- WhatsApp -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.907h.003c4.37 0 7.927-3.552 7.931-7.928a7.86 7.86 0 0 0-2.327-5.594ZM7.995 14.52a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592Zm3.69-4.82c-.202-.101-1.202-.594-1.392-.66-.19-.066-.33-.1-.47.101-.14.202-.54.66-.662.802-.12.14-.24.156-.442.054-.202-.101-.853-.314-1.624-1.002-.6-.535-1.005-1.197-1.123-1.4-.118-.202-.013-.311.088-.41.09-.09.202-.236.3-.354.1-.118.133-.2.2-.334.066-.134.034-.251-.017-.352-.05-.101-.47-1.136-.643-1.556-.17-.41-.35-.353-.47-.36-.12-.007-.258-.007-.396-.007a.781.781 0 0 0-.568.264c-.19.203-.733.717-.733 1.748 0 1.03.75 2.023.853 2.165.103.143 1.477 2.257 3.578 3.16.5.216.89.345 1.197.443.502.16.96.137 1.32.084.404-.06 1.202-.49 1.372-.964.17-.474.17-.88.12-.964-.05-.084-.19-.134-.39-.234Z"/>
+                </svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4>WhatsApp Corporativo</h4>
+                <a href="#" data-action="whatsapp-budget" target="_blank">+54 291 576-1644</a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4>Correo de Ingeniería</h4>
+                <a href="mailto:victorio.zabalet@gmail.com">victorio.zabalet@gmail.com</a>
+              </div>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <circle cx="12" cy="11" r="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4>Área de Cobertura</h4>
+                <p>Provincia de Buenos Aires, Argentina (Servicios en todo el país)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Redes Sociales -->
+          <div class="contact-socials">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn de VIZELEC">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulario Interactivo -->
+        <div class="contact-form-container glass-card reveal reveal-delay-1">
+          <div id="form-status" class="form-status"></div>
+          
+          <form id="vizelec-form" class="contact-form" novalidate>
+            <!-- Nombre -->
+            <div class="form-group">
+              <input type="text" id="name" name="name" class="form-control" placeholder=" " required>
+              <label for="name" class="form-label">Nombre y Apellido</label>
+              <div id="name-error" class="error-message"></div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
+              <label for="email" class="form-label">Correo Electrónico Corporativo</label>
+              <div id="email-error" class="error-message"></div>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder=" " required>
+              <label for="phone" class="form-label">Teléfono de Contacto</label>
+              <div id="phone-error" class="error-message"></div>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-group">
+              <textarea id="message" name="message" class="form-control" placeholder=" " required></textarea>
+              <label for="message" class="form-label">Detalles del Proyecto o Consulta</label>
+              <div id="message-error" class="error-message"></div>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn btn-primary">
+              Enviar Mensaje de Consulta
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       9. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Columna 1: Branding -->
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5 2L4 13.5H11.5L10.5 22L20 10.5H12.5L13.5 2Z" fill="url(#logo-grad-foot)" stroke="var(--accent-blue)" stroke-width="1.5" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-grad-foot" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--accent-blue)"/>
+                <stop offset="1" stop-color="var(--accent-green)"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>VIZELEC</span>
+        </a>
+        <p>
+          Consultora en ingeniería de sistemas eléctricos de potencia, SCADA y automatización de procesos industriales. Soluciones orientadas a maximizar la seguridad y la eficiencia energética.
+        </p>
+      </div>
+
+      <!-- Columna 2: Enlaces Rápidos -->
+      <nav class="footer-links" aria-label="Enlaces rápidos del pie de página">
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Columna 3: Información Directa -->
+      <div class="footer-contact">
+        <h4>Datos de Contacto</h4>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <a href="tel:+542915761644">+54 291 576-1644</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <a href="mailto:victorio.zabalet@gmail.com">victorio.zabalet@gmail.com</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <circle cx="12" cy="11" r="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Provincia de Buenos Aires, Argentina.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra de Derechos Autorales -->
+    <div class="container footer-bottom">
+      <p>&copy; 2026 VIZELEC Ingeniería. Todos los derechos reservados. Diseñado para la industria moderna.</p>
+      <div class="footer-bottom-links">
+        <a href="#contacto">Soporte Técnico</a>
+        <a href="#servicios">Aviso Legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp de contacto inmediato -->
+  <a href="#" class="whatsapp-float" aria-label="Contactarse por WhatsApp" target="_blank" rel="noopener noreferrer">
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.907h.003c4.37 0 7.927-3.552 7.931-7.928a7.86 7.86 0 0 0-2.327-5.594ZM7.995 14.52a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592Zm3.69-4.82c-.202-.101-1.202-.594-1.392-.66-.19-.066-.33-.1-.47.101-.14.202-.54.66-.662.802-.12.14-.24.156-.442.054-.202-.101-.853-.314-1.624-1.002-.6-.535-1.005-1.197-1.123-1.4-.118-.202-.013-.311.088-.41.09-.09.202-.236.3-.354.1-.118.133-.2.2-.334.066-.134.034-.251-.017-.352-.05-.101-.47-1.136-.643-1.556-.17-.41-.35-.353-.47-.36-.12-.007-.258-.007-.396-.007a.781.781 0 0 0-.568.264c-.19.203-.733.717-.733 1.748 0 1.03.75 2.023.853 2.165.103.143 1.477 2.257 3.578 3.16.5.216.89.345 1.197.443.502.16.96.137 1.32.084.404-.06 1.202-.49 1.372-.964.17-.474.17-.88.12-.964-.05-.084-.19-.134-.39-.234Z"/>
+    </svg>
+  </a>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+</body>
+</html>
