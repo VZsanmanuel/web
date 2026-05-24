@@ -793,70 +793,98 @@ ul {
 
 
 
-/* --- 4.8 FORMULARIO DE CONTACTO --- */
-.contact-grid {
+/* --- 4.8 CONTACTO DIRECTO PREMIUM (SIN FORMULARIO) --- */
+.contact-details-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 4rem;
-  align-items: stretch;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 @media (max-width: 992px) {
-  .contact-grid {
+  .contact-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .contact-details-grid {
     grid-template-columns: 1fr;
-    gap: 3.5rem;
   }
 }
 
-.contact-info {
+.contact-card-premium {
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+.contact-card-premium:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.08);
 }
 
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.contact-detail-item {
-  display: flex;
-  gap: 1.25rem;
-  align-items: flex-start;
-}
-
-.contact-detail-icon {
-  width: 48px;
-  height: 48px;
+.contact-card-icon {
+  width: 64px;
+  height: 64px;
   background: rgba(0, 210, 255, 0.05);
   border: 1px solid rgba(0, 210, 255, 0.15);
   color: var(--accent-blue);
-  border-radius: var(--radius-md);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-smooth);
+}
+.contact-card-premium:hover .contact-card-icon {
+  background: var(--accent-blue);
+  color: var(--bg-primary);
+  box-shadow: var(--shadow-glow-blue);
+  transform: scale(1.05);
 }
 
-.contact-detail-text h4 {
-  font-size: 1.05rem;
-  margin-bottom: 0.25rem;
+.contact-card-premium h4 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
-.contact-detail-text p,
-.contact-detail-text a {
+
+.contact-card-premium p {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
 }
-.contact-detail-text a:hover {
+
+.contact-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+.contact-link:hover {
   color: var(--accent-blue);
 }
 
-.contact-socials {
-  display: flex;
-  gap: 1rem;
+.contact-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
 }
+
+.contact-socials-center {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  padding: 1.25rem 2.5rem;
+  border-radius: var(--radius-full);
+  display: inline-flex !important;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: max-content;
+}
+
 .social-link {
   width: 40px;
   height: 40px;
@@ -874,104 +902,6 @@ ul {
   border-color: var(--accent-blue);
   color: var(--accent-blue);
   transform: translateY(-2px);
-}
-
-/* Estilo del Formulario */
-.contact-form-container {
-  padding: 3rem;
-}
-@media (max-width: 576px) {
-  .contact-form-container {
-    padding: 2rem 1.5rem;
-  }
-}
-
-.form-group {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.form-control {
-  width: 100%;
-  padding: 1rem 1.25rem;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
-  border-radius: var(--radius-md);
-  transition: var(--transition-smooth);
-  font-size: 0.95rem;
-}
-.form-control:focus {
-  border-color: var(--accent-blue);
-  box-shadow: 0 0 15px rgba(0, 210, 255, 0.15);
-  background: rgba(11, 15, 25, 0.6);
-}
-
-textarea.form-control {
-  resize: vertical;
-  min-height: 140px;
-}
-
-.form-label {
-  position: absolute;
-  left: 1.25rem;
-  top: 1rem;
-  color: var(--text-muted);
-  pointer-events: none;
-  transition: var(--transition-smooth);
-}
-
-/* Efecto Floating Label */
-.form-control:focus ~ .form-label,
-.form-control:not(:placeholder-shown) ~ .form-label {
-  top: -0.75rem;
-  left: 0.75rem;
-  font-size: 0.8rem;
-  color: var(--accent-blue);
-  background-color: var(--bg-secondary);
-  padding: 0 0.4rem;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-}
-
-/* Validaciones Visuales */
-.form-control.invalid {
-  border-color: hsl(0, 85%, 60%) !important;
-  box-shadow: 0 0 10px rgba(255, 50, 50, 0.15) !important;
-}
-.form-control.valid {
-  border-color: var(--accent-green) !important;
-}
-.error-message {
-  font-size: 0.8rem;
-  color: hsl(0, 85%, 65%);
-  margin-top: 0.35rem;
-  display: none;
-}
-
-.form-status {
-  padding: 1rem;
-  border-radius: var(--radius-md);
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-  display: none;
-  font-weight: 500;
-  text-align: center;
-  animation: fadeIn 0.4s ease;
-}
-.form-status.success {
-  background: rgba(0, 230, 118, 0.1);
-  color: var(--accent-green);
-  border: 1px solid rgba(0, 230, 118, 0.2);
-}
-.form-status.error {
-  background: rgba(255, 50, 50, 0.15);
-  color: hsl(0, 85%, 65%);
-  border: 1px solid rgba(255, 50, 50, 0.25);
-}
-
-.contact-form .btn {
-  width: 100%;
 }
 
 /* Botón flotante de WhatsApp */
